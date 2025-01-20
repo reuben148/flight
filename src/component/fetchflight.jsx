@@ -12,7 +12,7 @@ const FetchFlight = () => {
   const API_KEY = 'your_api_key_here';  
   const endpoint = `http://api.aviationstack.com/v1/flights?access_key=86b3e9ea28f4ef71517bd06103ad3d6d`;
 
-  // Fetch flights data
+  
   useEffect(() => {
     const fetchFlights = async () => {
       try {
@@ -30,14 +30,14 @@ const FetchFlight = () => {
     };
 
     fetchFlights();
-  }, []);  // Runs once on component mount
+  }, []);  
 
-  // Helper function to parse time string into Date object
+  
   const parseTimeString = (timeString) => {
     return timeString ? new Date(timeString) : null;
   };
 
-  // Filter flights based on user input (departure and arrival time)
+ 
   useEffect(() => {
     const filterFlights = () => {
       const filtered = flights.filter(flight => {
@@ -49,26 +49,26 @@ const FetchFlight = () => {
         const parsedUserDepTime = parseTimeString(departureTime);
         const parsedUserArrTime = parseTimeString(arrivalTime);
 
-        // Compare times if user input is provided
+        
         const isDepartureValid = parsedUserDepTime ? parsedDepTime >= parsedUserDepTime : true;
         const isArrivalValid = parsedUserArrTime ? parsedArrTime >= parsedUserArrTime : true;
 
         return isDepartureValid && isArrivalValid;
       });
 
-      // Limit the filtered results to 3 or 6 flights
-      setFilteredFlights(filtered.slice(0, 3)); // Change this to .slice(0, 3) to show only 3 flights
+      
+      setFilteredFlights(filtered.slice(0, 3)); 
     };
 
-    // Trigger filtering if either departure or arrival time has been typed
+
     if (departureTime || arrivalTime) {
       filterFlights();
     } else {
-      setFilteredFlights([]); // Clear filtered results if no input
+      setFilteredFlights([]); 
     }
-  }, [departureTime, arrivalTime, flights]); // Re-run filter on text input changes
+  }, [departureTime, arrivalTime, flights]); 
 
-  // Handle input changes for times (as text)
+  
   const handleDepartureTimeChange = (e) => setDepartureTime(e.target.value);
   const handleArrivalTimeChange = (e) => setArrivalTime(e.target.value);
 
@@ -79,7 +79,7 @@ const FetchFlight = () => {
     <div className="p-4 border rounded-lg shadow-md max-w-full mx-auto">
       <h1 className="text-2xl font-bold text-center mb-4">Flight Information</h1>
 
-      {/* Time Filter Form */}
+      
       <div className="mb-6 flex flex-col sm:flex-row sm:space-x-4 mb-6 justify-center">
         <div className="flex flex-col mb-4 sm:mb-0">
           <label htmlFor="departureTime" className="mb-2 text-sm text-gray-700">Departure Time</label>
@@ -105,12 +105,12 @@ const FetchFlight = () => {
         </div>
       </div>
 
-      {/* Display filtered flights only if input is provided */}
+      
       {filteredFlights.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredFlights.map((flight, index) => (
             <div key={index} className="border rounded-lg shadow-md p-4 flex flex-col items-center">
-              {/* Flight Image / Airline Logo */}
+              
               <div className="w-24 h-24 mb-4">
                 {flight.airline.logo ? (
                   <img src={flight.airline.logo} alt={flight.airline.name} className="w-full h-full object-contain" />
@@ -121,7 +121,7 @@ const FetchFlight = () => {
                 )}
               </div>
 
-              {/* Flight Information */}
+        
               <div className="text-center">
                 <h3 className="text-xl font-bold">{flight.flight_iata}</h3>
                 <p className="text-sm text-gray-500">{flight.flight_status}</p>
@@ -135,7 +135,7 @@ const FetchFlight = () => {
           ))}
         </div>
       ) : (
-        // Show message if no results are found or if no input was provided yet
+    
         (departureTime || arrivalTime) && (
           <p className="text-center text-gray-500 mt-6">No flights match your search criteria.</p>
         )
