@@ -10,7 +10,7 @@ function Hotel() {
       <div className='bg-blue-500 text-white font-serif text-center animate-move-left-right'>
         For emergency, kindly contact 09071009969, an immediate response is assured....
      </div>
-
+ 
     <div className='text-center text-3xl mt-[10px] '>
       <p className='font-serif'>Going Somewhere?</p>
     </div>
