@@ -10,7 +10,7 @@ const FetchFlight = () => {
   const [arrivalTime, setArrivalTime] = useState('');
 
   const API_KEY = 'your_api_key_here';  
-  const endpoint = `http://api.aviationstack.com/v1/flights?access_key=69d91dae64b1045cf5859e3549f0960`;
+  const endpoint = `http://api.aviationstack.com/v1/flights?access_key=69d91dae64b1045cf5859e3549f09607`;
 
   // Fetch flights data
   useEffect(() => {
