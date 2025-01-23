@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import Footer from '../component/footer'
 import Icons from '../component/icons'
 import FetchFlight from '../component/fetchflight'
+import News from '../component/news'
 
 function Hotel() {
   return (
     <div>
-      <div className='bg-blue-500 text-white font-serif text-center animate-move-left-right'>
-        For emergency, kindly contact 09071009969, an immediate response is assured....
-     </div>
+     <div className='bg-blue-500 text-white font-serif text-center animate-marquee'>
+  For emergency, kindly contact 09071009969, an immediate response is assured....
+</div>
+
  
      <div className="text-center text-3xl mt-6">
   <p className="font-serif text-gray-800">Going Somewhere?</p>
@@ -111,10 +113,8 @@ function Hotel() {
     </div>
   </div>
 </div>
-
-
-
 <Icons />
+<News />
 <Footer />
     </div>
   )
