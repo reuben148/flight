@@ -11,31 +11,42 @@ function Hotel() {
         For emergency, kindly contact 09071009969, an immediate response is assured....
      </div>
  
-    <div className='text-center text-3xl mt-[10px] '>
-      <p className='font-serif'>Going Somewhere?</p>
-    </div>
-    <div className='flex gap-8 grid grid-cols-1 lg:grid-cols-5 gap-5 mt-[10px]'>
-    <div className='flex gap-1 hover:bg-blue-200'>
-    <i class="fa-solid fa-plane-circle-check mt-[3px]"></i>
-    <p className='font-serif'>Flight</p>
-    </div>
-    <div className='flex gap-1 hover:bg-blue-200'>
-    <i class="fa-solid fa-hotel mt-[3px]"></i>
-    <p className='font-serif'>Hotel</p>
-    </div>
-    <div className='flex gap-1 hover:bg-blue-200'>
-    <i class="fa-solid fa-house mt-[4px]"></i>
-    <p className='font-serif'>Shortlets</p>
-    </div>
-    <div className='flex gap-1 hover:bg-blue-200'>
-    <i class="fa-solid fa-suitcase mt-[4px]"></i>
-    <p className='font-serif'>Manage Bookings</p>
-    </div>
-    <div className='flex gap-1 hover:bg-blue-200'>
-    <i class="fa-solid fa-certificate mt-[4px] text-yellow-400"></i>
-    <p className='font-serif'>We offer the best deals in the industry!</p>
-    </div>
+     <div className="text-center text-3xl mt-6">
+  <p className="font-serif text-gray-800">Going Somewhere?</p>
+</div>
+
+<div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-6">
+
+  <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-300 hover:bg-blue-100">
+    <i class="fa-solid fa-plane-circle-check text-3xl text-blue-600"></i>
+    <p className="font-serif font-medium text-lg text-gray-700">Flight</p>
   </div>
+
+  
+  <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-300 hover:bg-blue-100">
+    <i class="fa-solid fa-hotel text-3xl text-green-600"></i>
+    <p className="font-serif font-medium text-lg text-gray-700">Hotel</p>
+  </div>
+
+
+  <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-300 hover:bg-blue-100">
+    <i class="fa-solid fa-house text-3xl text-yellow-600"></i>
+    <p className="font-serif font-medium text-lg text-gray-700">Shortlets</p>
+  </div>
+
+ 
+  <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-300 hover:bg-blue-100">
+    <i class="fa-solid fa-suitcase text-3xl text-purple-600"></i>
+    <p className="font-serif font-medium text-lg text-gray-700">Manage Bookings</p>
+  </div>
+
+  
+  <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition-shadow duration-300 hover:bg-blue-100">
+    <i class="fa-solid fa-certificate text-3xl text-yellow-400"></i>
+    <p className="font-serif font-medium text-lg text-gray-700">We offer the best deals in the industry!</p>
+  </div>
+</div>
+
 
     <br></br>
     <hr></hr>
@@ -54,43 +65,53 @@ function Hotel() {
     </div>
     </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 '>
-      <div class="h-[430px] w-[300px] bg-white rounded-[15px] shadow-[0_4px_6px_rgba(64,64,64,0.6)]  p-[20px] ml-[45px] mt-[40px] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-10 md:border-0 transition-transform duration-300 transform hover:scale-105">
-     <img className='w-[300px] h-[300px]' src="flight.jpg" alt="paypal" />
-     <div className='flex gap-10 mt-[5px]'>
-     <p className='font-serif text-blue-500 text-xl'>Airfrance</p>
-     <p className='font-serif border bg-yellow-500 text-white rounded-[5px]'>Book flight</p>
-     </div>
-     <div className='flex gap-5 mt-[5px]' >
-     <p className='font-serif'>price-$1000</p>
-     <p className='font-serif'>Top Flight Deal</p>
-     </div>
-     </div>
-    
-      <div class="h-[430px] w-[300px] bg-white rounded-[15px] shadow-[0_4px_6px_rgba(64,64,64,0.6)]  p-[20px] ml-[45px] mt-[40px] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-10 md:border-0 transition-transform duration-300 transform hover:scale-105">
-     <img className='h-[300px] w-[250px]' src="flight1.jpg" alt="bank transfer" />
-     <div className='flex gap-10 mt-[5px]'>
-     <p className='font-serif text-blue-500 text-xl'>AirPeace</p>
-     <p className='font-serif border bg-yellow-500 text-white rounded-[5px]'>Book flight</p>
-     </div>
-     <div className='flex gap-5 mt-[5px]' >
-     <p className='font-serif'>price-$2000</p>
-     <p className='font-serif'>Top Flight Deal</p>
-     </div>
-     </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
 
-          <div class="h-[430px] w-[300px] bg-white rounded-[15px] shadow-[0_4px_6px_rgba(64,64,64,0.6)]  p-[20px] ml-[45px] mt-[40px] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-10 md:border-0 transition-transform duration-300 transform hover:scale-105">
-     <img className='h-[300px] w-[300px] ml-[-1px]' src="flying.jpg" alt="bitcoin" />
-     <div className='flex gap-10 mt-[5px]'>
-     <p className='font-serif text-blue-500 text-xl'>Fly Emirate</p>
-     <p className='font-serif border bg-yellow-500 text-white rounded-[5px]'>Book flight</p>
-     </div>
-     <div className='flex gap-5 mt-[5px]' >
-     <p className='font-serif'>price-$3000</p>
-     <p className='font-serif'>Top Flight Deal</p>
-     </div>
-     </div>
-     </div>
+  <div className="max-w-xs mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105">
+    <img className="w-full h-64 object-cover" src="flight.jpg" alt="Airfrance" />
+    <div className="p-4">
+      <div className="flex justify-between items-center mb-3">
+        <p className="font-serif text-blue-500 text-xl">Airfrance</p>
+        <button className="font-serif border bg-yellow-500 text-white rounded-md px-4 py-2">Book Flight</button>
+      </div>
+      <div className="flex justify-between items-center text-sm">
+        <p className="font-serif text-gray-700">Price: $1000</p>
+        <p className="font-serif text-green-600">Top Flight Deal</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div className="max-w-xs mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105">
+    <img className="w-full h-64 object-cover" src="flight1.jpg" alt="AirPeace" />
+    <div className="p-4">
+      <div className="flex justify-between items-center mb-3">
+        <p className="font-serif text-blue-500 text-xl">AirPeace</p>
+        <button className="font-serif border bg-yellow-500 text-white rounded-md px-4 py-2">Book Flight</button>
+      </div>
+      <div className="flex justify-between items-center text-sm">
+        <p className="font-serif text-gray-700">Price: $2000</p>
+        <p className="font-serif text-green-600">Top Flight Deal</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div className="max-w-xs mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105">
+    <img className="w-full h-64 object-cover" src="flying.jpg" alt="Fly Emirate" />
+    <div className="p-4">
+      <div className="flex justify-between items-center mb-3">
+        <p className="font-serif text-blue-500 text-xl">Fly Emirate</p>
+        <button className="font-serif border bg-yellow-500 text-white rounded-md px-4 py-2">Book Flight</button>
+      </div>
+      <div className="flex justify-between items-center text-sm">
+        <p className="font-serif text-gray-700">Price: $3000</p>
+        <p className="font-serif text-green-600">Top Flight Deal</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <Icons />

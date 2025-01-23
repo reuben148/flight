@@ -10,9 +10,9 @@ const FetchFlight = () => {
   const [arrivalTime, setArrivalTime] = useState('');
 
   const API_KEY = 'your_api_key_here';  
-  const endpoint = `https://api.aviationstack.com/v1/flights?access_key=86b3e9ea28f4ef71517bd06103ad3d6d`;
+  const endpoint = `https://api.aviationstack.com/v1/flights?access_key=86b3e9ea28f4ef71517bd06103ad3d6`;
 
-  // Fetch flights data
+
   useEffect(() => {
     const fetchFlights = async () => {
       try {
@@ -30,14 +30,12 @@ const FetchFlight = () => {
     };
 
     fetchFlights();
-  }, []);  // Runs once on component mount
-
-  // Helper function to parse time string into Date object
+  }, []);
   const parseTimeString = (timeString) => {
     return timeString ? new Date(timeString) : null;
   };
 
-  // Filter flights based on user input (departure and arrival time)
+  
   useEffect(() => {
     const filterFlights = () => {
       const filtered = flights.filter(flight => {
@@ -57,18 +55,18 @@ const FetchFlight = () => {
       });
 
       // Limit the filtered results to 3 or 6 flights
-      setFilteredFlights(filtered.slice(0, 3)); // Change this to .slice(0, 3) to show only 3 flights
+      setFilteredFlights(filtered.slice(0, 6)); // Change this to .slice(0, 3) to show only 3 flights
     };
 
     // Trigger filtering if either departure or arrival time has been typed
     if (departureTime || arrivalTime) {
       filterFlights();
     } else {
-      setFilteredFlights([]); // Clear filtered results if no input
+      setFilteredFlights([]); 
     }
-  }, [departureTime, arrivalTime, flights]); // Re-run filter on text input changes
+  }, [departureTime, arrivalTime, flights]); 
 
-  // Handle input changes for times (as text)
+  
   const handleDepartureTimeChange = (e) => setDepartureTime(e.target.value);
   const handleArrivalTimeChange = (e) => setArrivalTime(e.target.value);
 
@@ -79,12 +77,11 @@ const FetchFlight = () => {
     <div className="p-4 border rounded-lg shadow-md max-w-full mx-auto">
       <h1 className="text-2xl font-bold text-center mb-4">Flight Information</h1>
 
-      {/* Time Filter Form */}
       <div className="mb-6 flex flex-col sm:flex-row sm:space-x-4 mb-6 justify-center">
         <div className="flex flex-col mb-4 sm:mb-0">
           <label htmlFor="departureTime" className="mb-2 text-sm text-gray-700">Departure Time</label>
           <input
-            type="text"
+            type="date"
             id="departureTime"
             value={departureTime}
             onChange={handleDepartureTimeChange}
@@ -95,7 +92,7 @@ const FetchFlight = () => {
         <div className="flex flex-col">
           <label htmlFor="arrivalTime" className="mb-2 text-sm text-gray-700">Arrival Time</label>
           <input
-            type="text"
+            type="date"
             id="arrivalTime"
             value={arrivalTime}
             onChange={handleArrivalTimeChange}
