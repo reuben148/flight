@@ -4,13 +4,15 @@ import React from 'react'
 function news() {
   return (
     <div>
-     <div className='flex justify-between bg-blue-200 border h-[200px] w-full p-4'>
+     <div className='flex justify-between bg-blue-200 border h-[200px] w-full p-4 mt-[15px]'>
   <div className='flex gap-4 flex-wrap'>
     <i class="fa-solid fa-bullhorn fa-3x text-blue-500 sm:justify-center lg:justify-start"></i>
-    <p className='font-serif text-slate-500'>
-      Want to get the latest travel news and deals? <br />
-      Enter your email and we'll send them your way.
+    <div>
+    <p className='font-serif text-xl'>
+      Want to get the latest travel news and deals? 
     </p>
+    <p className='font-serif text-slate-500'>Enter your email and we'll send them your way.</p>
+    </div>
   </div>
   <div className='flex sm:flex-wrap gap-4 flex-col sm:flex-row'>
     <div class="space-y-4 sm:space-y-0 sm:w-1/2">

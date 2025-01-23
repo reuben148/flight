@@ -4,6 +4,7 @@ import Footer from '../component/footer'
 import Icons from '../component/icons'
 import FetchFlight from '../component/fetchflight'
 import News from '../component/news'
+import Map from '../component/map'
 
 function Hotel() {
   return (
@@ -14,7 +15,7 @@ function Hotel() {
 
  
      <div className="text-center text-3xl mt-6">
-  <p className="font-serif text-gray-800">Going Somewhere?</p>
+  <p className="font-serif text-gray-800">Going Somewhere!</p>
 </div>
 
 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-6">
@@ -115,6 +116,7 @@ function Hotel() {
 </div>
 <Icons />
 <News />
+<Map />
 <Footer />
     </div>
   )
