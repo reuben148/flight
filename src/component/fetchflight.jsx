@@ -10,7 +10,7 @@ const FetchFlight = () => {
   const [showFlights, setShowFlights] = useState(false); // New state to control when to show flights
 
   const API_KEY = 'your_api_key_here';
-  const endpoint = `https://api.aviationstack.com/v1/flights?access_key=ecfb4091b556dc4db2253aeb9b3d87ba`;
+  const endpoint = `https://api.aviationstack.com/v1/flights?access_key=148c4bfb7265c204fa01e505bb7f6318`;
 
   // Fetch flight data from the API
   useEffect(() => {
